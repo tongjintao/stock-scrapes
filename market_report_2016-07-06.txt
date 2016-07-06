@@ -1,0 +1,683 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="hkejStock360">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8, IE=9, IE=10, IE=edge" />
+<meta property="fb:app_id" content="221383308051789"/>
+<meta name="description" content="港股360(stock360.hkej.com)提供全天候港股、窩輪、外匯資訊及分析。"/>
+<meta name="keywords" content="免費即時股票報價,免費即時港股報價,免費報價,即時報價,即時港股報價,即時港股行情,信報,信報財經新聞,港股360,港股行情,香港股票,投資組合,即時投資組合,即時圖表,互動圖表,技術圖表,股票報價港股,新股上市,ipo,證券,投資組合,股票,財經,財經網,金融,股市資訊,金融資訊,財經資訊,技術分析,經濟,港股,大盤,行情,窩輪,認股證,牛熊證,期指,股權,H股,A股,etf,國企股,恆生指數,創業板,港股新聞,財經新聞,研究報告,大行報告,圖表分析,技術分析,走勢,活躍股票,異動股,分類表現,行業分類,股息,公布業績,派息公佈,財經日誌,港股直通車,聯交所,投資,金價,外匯,基金,匯率,經濟數據,藍籌股,大市,公布業績,派息公布,本地指數,環球指數,紅籌指數,創業板,概念股,香港財經股票,國企,紅籌,藍籌,收回價,回收價,認購証,認股權證,認沽證,認沽証,認購證,牛證,熊證,行使價,槓桿,槓杆比率,杠桿,杠桿比率,實際杠桿,溢價,對沖值,換股比率,引伸波幅,成交量,成交額,街貨量,資金流向,行使價,到期日,衍生工具,結構性產品,備兌認股證,相關資產,正股,陰陽燭,板塊,免费即时股票报价,免费即时港股报价,免费报价,即时报价,即时港股报价,即时港股行情,信报,信报财经新闻,港股360,港股行情,香港股票,投资组合,即时投资组合,即时图表,互动图表,技术图表,股票报价港股,新股上市,ipo,證券,投资组合,股票,财经,财经网,金融,股市资讯,金融资讯,财经资讯,技术分析,经济,港股,大盘,行情,窝轮,认股證,牛熊證,期指,股权,H股,A股,etf,国企股,恒生指数,创业板,港股新闻,财经新闻,研究报告,大行报告,图表分析,技术分析,走势,活跃股票,异动股,分类表现,行业分类,股息,公布业绩,派息公佈,财经日誌,港股直通车,联交所,投资,金价,外汇,基金,汇率,经济数据,蓝筹股,大市,公布业绩,派息公布,本地指数,环球指数,红筹指数,创业板,概念股,香港财经股票,国企,红筹,蓝筹,收回价,回收价,认购证,认股权證,认沽證,认沽证,认购證,牛證,熊證,行使价,槓桿,槓杆比率,杠桿,杠桿比率,实际杠桿,溢价,对冲值,换股比率,引伸波幅,成交量,成交额,街货量,资金流向,行使价,到期日,衍生工具,结构性产品,备兑认股證,相关资产,正股,阴阳烛,板块,stock,price,real time,free quote,stock,quote,shares,hk stock quote,real time stock chart,interactive chart,technical analysis,dividends,security,equity,CBBC,warrant,options,hang seng index,technical analysis,industries,commentary, recommendations,research reports,economic data,futures,hong kong market,finance,investment,business,a share,h share,commodity,forex,economic data,financial news,gold price,company events,portfolio,fund,exchange rate,fx,fx rate, economics news"/>
+<link href="/css/common/cssreset-min.css?2015121601" rel="stylesheet" type="text/css" />
+<link href="/css/common/common_v40.css?2015121601" rel="stylesheet" type="text/css" />
+<link href="/css/hkejstock/marketData.css?2015121601" rel="stylesheet" type="text/css" />
+<link href="/css/hkejstock/indexboxinews.css?2015121601" rel="stylesheet" type="text/css" />
+<link href="/css/hkejstock/mfChartOverlay.css?2015121601" rel="stylesheet" type="text/css" />
+<link href="/plugin/runningText/css/smoothDivScroll.css?2015121601" rel="Stylesheet" type="text/css" />
+<link href="/plugin/colorbox/colorbox.css?2015121601" rel="stylesheet" type="text/css">
+<link href="/plugin/dropdown/jquery.dropdown.css?2015121601" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/js/jquery-1.10.2.min.js?2014011701"></script>
+<script type="text/javascript" src="/js/angular.min.js?2014011701"></script>
+<script type="text/javascript" src="/js/marketdata.js?2014011701"></script>
+<!--The two files below are for datepicker and calendar.The .js is 68kb and the css is 20kb.-->
+<script type="text/javascript" src="/js/jqueryUI/jquery-ui-1.10.3.custom.min.js?2014011701"></script>
+<link rel="stylesheet" href="/plugin/css/smoothness/jquery-ui-1.10.3.custom.min.css?2015121601">
+<script type="text/javascript" src="/plugin/tooltipster/js/jquery.tooltipster.min.js?2014011701"></script>
+<link rel="stylesheet" href="/plugin/tooltipster/css/tooltipster.css?2015121601">
+<!--
+<script type="text/javascript" src="/js/jqueryUI/jquery.ui.core.min.js"></script>
+<script type="text/javascript" src="/js/jqueryUI/jquery.ui.widget.min.js"></script>-->
+<link rel="stylesheet" type="text/css" href="/plugin/slider/css/sliderkit-core.css?2015121601" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="/plugin/slider/css/homeTabs.css?2015121601" media="screen, projection" />
+<!--[if IE 6]><link rel="stylesheet" type="text/css" href="/plugin/slider/css/sliderkit-demos-ie6.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/plugin/slider/css/sliderkit-demos-ie7.css" /><![endif]-->
+<!--[if IE 8]><link rel="stylesheet" type="text/css" href="/plugin/slider/css/sliderkit-demos-ie8.css" /><![endif]-->
+<link rel="apple-touch-icon" href="http://static.hkej.com/stock360/images/bookmark-icon.png"/>
+<link rel="apple-touch-icon-precomposed" href="http://static.hkej.com/stock360/images/bookmark-icon.png"/>
+<script type="text/javascript" src="/plugin/slider/js/external/jquery.easing.1.3.min.js?2014011701"></script>
+<script type="text/javascript" src="/plugin/slider/js/sliderkit/jquery.sliderkit.1.9.2.pack.js?2014011701"></script> 
+<script type="text/javascript" src="/plugin/datepicker/jquery.ui.datepicker-zh-TW.js?2014011701"></script>
+<link href="/css/hkejstock/thickbox.css?2015121601" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jqueryExt/jquery.thickbox.js?2014011701"></script>
+<script type="text/javascript" src="/js/equalHeight.js?2014011701"></script>
+<script type="text/javascript" src="/plugin/colorbox/jquery.colorbox-min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+
+
+<title>信報網站 - 港股360</title>
+
+
+<script type="text/javascript">
+var chartServerDomain = 'http://hkej.dbpower.com.hk';
+var mainSiteUrl = 'http://www.hkej.com/';
+</script>
+
+
+<script>
+	$(document).ready(function() {
+		$('.tooltip').tooltipster();
+		$('.indexList div').mouseover(function(){
+			switch_tabs($(this));
+		});
+		switch_tabs($('.defaulttab'));
+	});
+ 
+function switch_tabs(obj)
+{
+	$('.indexDetail').hide();
+	$('.indexList div').removeClass("selected");
+	var id = obj.attr("rel");
+ 
+	$('#'+id).show();
+	obj.addClass("selected");
+}
+
+  (function() {
+    var useSSL = 'https:' == document.location.protocol;
+    var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js?2014011701';
+    //document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+		document.write('<script type="text/javascript" src="' + src + '"><\/script>');
+  })();
+
+var hkejApp = angular.module('hkejStock360',[]);
+
+</script>
+<script type="text/javascript">googletag.defineSlot('/79812692/HKEJ_Stock360_TopBanner', [[728, 90], [970, 90], [970, 160]], 'div-gpt-ad-1385631254234-0').addService(googletag.pubads());googletag.defineSlot('/79812692/HKEJ_Stock360_InBanner', [656, 80], 'div-gpt-ad-1395303580813-0').addService(googletag.pubads());googletag.defineSlot('/79812692/HKEJ_Stock360_LongBanner', [976, 80], 'div-gpt-ad-1395394341039-0').addService(googletag.pubads());googletag.defineSlot('/79812692/HKEJ_Stock360_LargeRectangle1', [[300, 250], [300, 600]], 'div-gpt-ad-1385630772174-0').addService(googletag.pubads());googletag.defineSlot('/79812692/HKEJ_Stock360_LargeRectangle2', [[2, 1], [300, 250]], 'div-gpt-ad-1385630938573-0').addService(googletag.pubads());googletag.pubads().enableSyncRendering();googletag.enableServices();</script></head>
+<body>
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId: '221383308051789',
+            cookie: true, // enable cookies to allow the server to access the session
+            xfbml: true, // parse social plugins on this page
+            version: 'v2.0' // use version 2.0
+        });
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id))
+            return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_GB/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<div class="mdMHead">
+	<div class="container">
+		<div class="gCol g976">
+				<div id="mdHeadBar">
+       	<div id="b2HKEJ"><a href="http://www.hkej.com/">返回信報網站主頁</a></div>
+        <div id="loginWrap">
+        	<div class="timeStamp">2016年7月6日 (三)</div>
+
+  <!---<div><a href="">登入</a></div>--->
+  <div><a href="
+  https://subscribe.hkej.com/member/login?forwardURL=http%3A%2F%2Fstock360.hkej.com%2FmarketWatch%2FReport%3Fd%3D2016-07-06">登入</a></div>
+  <div><a href="http://www.hkej.com/template/registration/jsp/register.jsp?txtype=NEW">註冊</a></div>  
+        </div>
+        </div>
+				<div id="mdMHeadLogo">
+        <div id="mLogo"><a href="/"><img src="/images/stock360-logo.png" class="theLogo" /></a></div>
+<!--				<div id="mSection">港股360</div>
+
+				<div id="mSection"><a href="/">港股360</a></div>
+-->
+			</div>
+	<div id="mdMMenu">
+                            <nav>
+                                <ul>
+                        <li class="sMain">
+<a href="/">股市脈搏</a>
+</li>
+<li class="sNews dd">
+<a href="/stockLive">港股直擊</a>
+<ul>
+<li class="s1"><a href="/stockLive/marketUpdates">大市動向</a></li>
+<li class="s2"><a href="/stockLive/expertAdvice">專家教路</a></li>
+<li class="s3"><a href="/stockLive/topMovers">異動追蹤</a></li>
+<li class="s4"><a href="/stockLive/announcement">重要通告</a></li>
+<li class="s5"><a href="/stockLive/companyCalendar">企業日誌</a></li>
+<li class="s6"><a href="/stockLive/forum">講股360</a></li>
+</ul>
+</li>
+<li class="sPortfolio">
+<a href="/myPortfolio">心水組合</a>
+</li>
+<li class="sStock">
+<a href="/quotePlus">即時報價</a>
+</li>
+<li class="sScreener dd double">
+<a href="/stockScreener">360<br />選股器</a>
+<ul>
+<li class="s1"><a href="/stockScreener/simple">策略選股</a></li>
+<li class="s2"><a href="/stockScreener/master">大師選股</a></li>
+<li class="s3"><a href="/stockScreener/profession">DIY選股</a></li>
+<li class="s4"><a href="/stockScreener/myportfolio">我的選股條件</a></li>
+</ul>
+</li>
+<li class="sMarketWatch dd on">
+<a href="/marketWatch">熱炒股</a>
+<ul>
+<li class="s1"><a href="/marketWatch/Top20">20大活躍</a></li>
+<li class="s2"><a href="/marketWatch/Industry">行業表現</a></li>
+<li class="s3"><a href="/marketWatch/Spot/todayStrong">即日強勢</a></li>
+<li class="s4"><a href="/marketWatch/Spot/macdBuy">MACD突破</a></li>
+<li class="s5"><a href="/marketWatch/Spot/continuousUp">連升股</a></li>
+</ul>
+</li>
+<li class="sIPO">
+<a href="/IPO">IPO</a>
+</li>
+<li class="sReport">
+<a href="/report">大行精選</a>
+</li>
+<li class="sStockConnect">
+<a href="/stockConnect">滬港通</a>
+</li>
+<li class="sIndex dd">
+<a href="/indices">指數一覽</a>
+<ul>
+<li class="s1"><a href="/indices/futures">即市期指</a></li>
+<li class="s2"><a href="/indices/hk">香港及中國指數</a></li>
+<li class="s3"><a href="/indices/global">亞洲及世界指數</a></li>
+</ul>
+</li>
+<li class="sDerivative dd">
+<a href="/derivatives">輪證360</a>
+<ul>
+<li class="s1"><a href="/derivatives/#tactic">輪證攻略</a></li>
+<li class="s2"><a href="/derivWatch/cbbc/恒生指數相關牛熊證">指數相關活躍牛熊證</a></li>
+<li class="s3"><a href="/derivWatch/warrants/恒生指數相關活躍窩輪">指數相關活躍窩輪</a></li>
+<li class="s4"><a href="/derivWatch/cbbc/近期上市牛熊證">近期上市牛熊證</a></li>
+<li class="s5"><a href="/derivWatch/cbbc/即將收回牛熊證">即將收回牛熊證</a></li>
+</ul>
+</li>
+<li class="sForexGold dd double">
+<a href="/forexGold">外滙/<br />貴金屬</a>
+<ul>
+<li class="s1"><a href="/forexGold/forex/HKD">外滙</a></li>
+<li class="s2"><a href="/forexGold/gold">貴金屬</a></li>
+</ul>
+</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>    
+</div>
+
+<div class="container">
+	<div class="gCol g976">
+		<div id="mdMHeadInfoBar">
+<script src="/js/hkej.worldindices.controller.js?2014011701"></script>
+			<div class="indicesWrap" ng-cloak ng-controller="WorldIndices" >
+        <ul>
+          <li ng-repeat="i in wdata | filter : byIndWidget() " >
+            <span class="name">{{i.ChiName}}</span>
+            <span id="{{k}}" class="latest {{i.ChgCls}}">{{i.Price}}</span>
+            <span id="{{k}}_pct" class="change {{i.ChgCls}}">{{displayWithoutSign(i.Change)}}</span>
+          </li>
+        </ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- IE Warning Start -->
+<div class="container" style="display:none;" id="IECheck">
+    <img src="/css/images/UI/ieupgrade_latest.jpg" width="992" height="89" border="0" usemap="#browserLinks" style="margin:24px 0 0 0;" />
+        <map name="browserLinks" id="browserLinks">
+        <area shape="rect" coords="664,8,707,75" href="http://www.google.com/chrome" target="_blank" />
+        <area shape="rect" coords="724,8,762,78" href="http://www.mozilla.com/en-US/" target="_blank" />
+        <area shape="rect" coords="779,9,820,78" href="http://www.opera.com/" target="_blank" />
+        <area shape="rect" coords="832,9,882,78" href="http://www.microsoft.com/hk/windows/chinese/internet-explorer/" target="_blank" />
+        <area shape="rect" coords="891,7,932,75" href="http://www.apple.com/hk/safari/" target="_blank" />
+        <area shape="rect" coords="966,2,993,26" id="close_win" href="#" />
+        </map>
+</div>
+<!-- IE Warning End -->
+<div class="container">
+	<div class="gCol g976">
+		<div class="adSpace ad970">
+
+<div id='div-gpt-ad-1385631254234-0'><script type='text/javascript'>googletag.display('div-gpt-ad-1385631254234-0');</script></div>
+		</div>
+	</div>
+</div>
+
+<div class="container" style="overflow: inherit;">
+  <script>
+/*var reloadUrl = location.href
+var speed = 20 * 60 * 1000 //20 minutes
+function reload(){
+	history.go(0);
+	location = reloadUrl;
+}
+setTimeout("reload()",speed);*/
+var anchorTag = '';
+</script>
+<script>
+function sortTbl(sortItem, sortOrder, date){
+	var cat = 'rpt';
+	var type = '';
+	if(cat == 'concept'){
+		var url = '/marketWatch/Concept'+'/內地經濟轉型?sec=&si='+sortItem+'&so='+sortOrder+'&p=1'+anchorTag;
+	}
+	else if(cat == 'rpt'){
+		var MyDate = new Date();
+		var LatestDate = '2016-07-06';
+		if(date == LatestDate){
+			if(sortItem != '' && sortOrder != ''){
+				var url = '/marketWatch/Report'+'?si='+sortItem+'&so='+sortOrder+'&p=1'+anchorTag;
+			}
+			else{
+				var url = '/marketWatch/Report';
+			}
+		}
+		else{	
+			if(sortItem != '' && sortOrder != ''){
+				var url = '/marketWatch/Report?d='+date+'&si='+sortItem+'&so='+sortOrder+'&p=1'+anchorTag; // get selected value
+			}
+			else{
+				var url = '/marketWatch/Report?d='+date+anchorTag;
+			}
+		}
+	}
+	else if(cat == 'indices'){
+		var url = '/'+'?si='+sortItem+'&so='+sortOrder+'&p=1'+anchorTag;
+	}
+	else if(cat == 'spot'){
+		var url = '/'+'?si='+sortItem+'&so='+sortOrder+'&p=1'+anchorTag;
+	}
+	else {
+    var url = '/'+'?si='+sortItem+'&so='+sortOrder+anchorTag;
+  }
+  if(url){
+    window.location = url;
+  }
+}
+
+</script>
+
+<div class="gCol g656">
+	<!--<script type="text/javascript" src="/js/jqueryUI/jquery.ui.autocomplete.min.js"></script>
+<script type="text/javascript" src="/js/jqueryUI/jquery.ui.menu.min.js"></script>-->
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		$("#inputCode").click(
+    	function(){
+				if($(this).val()== "股票代號/名稱" || $(this).val()== "股票代号/名称"){
+    			$(this).val('');
+				}
+    });
+
+		// Removes the defualt text on key press
+    function keyDown (e) {
+				//alert(e.target);
+        var input = $(e.target);
+        
+        if (input && !input.data('data-entered')) {
+        	input.data('data-entered', true);
+        	//input.val("");
+        }
+    }
+    
+    // Restore the default text if empty on blur
+    function blur(e) {
+        var input = $(e.target);
+        
+        if (input && input.val() === "") {
+        	input.data('data-entered', false);
+        	input.val(input.data('blank-value'));
+        }
+    }
+    
+    $('.populated-text').each(function () {
+        var input = $(this);
+        input.data('blank-value', input.val());
+        input.data('data-entered', false);
+        input.keydown(keyDown);
+        input.blur(blur);
+    });
+		
+		$("#inputCode").keypress(function(e) {
+			if ( e.which == 13 ) {
+				go();
+			}
+		});
+
+		$("#inputCode").focus(); // focus at the input field		
+		$("#inputCode").select(); // select the text in the input field for IE
+
+	});
+	function go() {	
+		var inputValue = $.trim($("#inputCode").val());
+    if(inputValue > 0 && parseFloat(inputValue) == parseInt(inputValue,10)){
+    	document.location.href='/quotePlus/'+parseInt($.trim($("#inputCode").val())); 
+    }
+    else {
+      alert('股票編號不正確，請重新輸入。');
+    }
+	}
+	$(function(){
+
+	$('#inputCode').autocomplete({
+		 source:'/data/StockNameForSearch',
+		 select: function(event, ui){ 
+    			go($("input#inputCode").val(ui.item.value));
+  		},
+		'open': function(e, ui) {
+					var inputValue = $.trim($("#inputCode").val());
+                    // Appends a div at the end, containing the link to open myModal
+					//if(inputValue > 0 && parseFloat(inputValue) == parseInt(inputValue,10)){
+    	
+						$('.ui-autocomplete').append("<div style='padding-top:5px; padding-bottom:5px; padding-right:5px; background-color:#999; text-align:right'><a href='/quotePlus/stockRelated/"+inputValue+"' style='color:#ffffff'>更多</a></div>");
+					//}
+    }
+	})
+
+});
+</script>
+<div class="stockQuoteWrap">
+	<div class="stockSearchWrap">
+			<!---<div class="title">即時報價</div>--->
+			<div class="searchBox">
+			<input type="text" id="inputCode" name="inputCode"  value="股票代號/名稱" class="populated-text">
+				<a id="submitLink" href="javascript:go();" ><span>查詢</span></a>
+			</div>
+	</div>
+
+<div class="hotSearchWrap" style="box-sizing: border-box;">	
+		<ul class="hotStocks">
+			<li><a href='/quotePlus/5'>00005 匯豐控股</a></li><li><a href='/quotePlus/1'>00001 長江和記實業</a></li><li><a href='/quotePlus/700'>00700 騰訊控股</a></li>		</ul>
+		<ul class="hotGP">
+			<li><a href='/marketWatch/Concept/內地經濟轉型?sec=內銀'>內銀</a></li><li><a href='/marketWatch/Concept/內地經濟轉型?sec=中資券商'>中資券商</a></li><li><a href='/marketWatch/Concept/產業?sec=內房'>內房</a></li>		</ul>
+	</div>
+	<div class="endBlk">
+		<img width="8" height="50" src="/images/stockQuoteBar-right.png">
+	</div>
+</div>
+<!---
+<div class="adSpace">
+  <div class="ad686">
+  </div>
+</div>
+--->
+	<div class="block" id="stockTbl">
+		<div class="blkTRC"><div></div></div>
+		<div class="blkHdr"><span class="tit1">熱炒股</span></div>
+		<div class="blkMenu">
+			<ul>
+				<li><a href="/marketWatch/Concept">熱門板塊</a></li>
+				<li><a href="/marketWatch/Spot">異動股</a></li>
+				<!---
+				<li class="on"><a href="/marketWatch/Report">大行精選</a></li>--->
+				<li><a href="/marketWatch/Top20">20大活躍股份</a></li>
+				<li><a href="/marketWatch/Indices">指數成份股</a></li>
+				<li><a href="/marketWatch/Industry">行業表現</a></li>
+			</ul>
+		</div>
+<script>
+$(document).ready(function() {
+
+    $("#calendar").datepicker({
+        onSelect: function(dateText, inst) {
+          var url = '/marketWatch/Report?d='+dateText+''; // get selected value
+          if (url) { // require a URL
+              window.location = url; // redirect
+          }
+          //return false;
+        },
+    dateFormat: 'yy-mm-dd',
+    changeMonth: true,
+    changeYear: true,
+    yearRange:"-10:+0",
+
+    });
+  var reportDate = '2016-07-06';
+  if(reportDate != ""){
+    var day = '6';
+    var month = '7';
+    var year = '2016';
+
+    month = month - 1;
+
+    $("#calendar").datepicker('setDate', new Date(year,month,day));
+  }
+
+    $('#mylink').click(function(e){
+
+    e.preventDefault();
+      $('#calendar').datepicker('show');
+    });
+});
+
+</script>
+	<div class="blkFilter" id="reportBlkfilter">
+		<div class="blkFilter_in">
+			<div class="paging">
+				<span class="left"><a href="javascript:sortTbl('','','2016-07-05')">2016年7月5日</a></span>
+				<span><a href="/marketWatch/Report">最新報告日</a></span>
+				<span class="datePick"><input type="hidden" id="calendar" ><a href="#" id="mylink">選擇日期</a></span>
+			</div>			
+		</div>
+	</div>
+<div class="blkCtnt">
+		<p class="tit2">
+報告日期：2016年7月6日<span class="dtInfo">第1-6項｜共6項</span></p>
+<table border="0" cellspacing="0" cellpadding="0" class="dt640">
+	<tbody>
+		<tr>
+			<th class="code">編號</th>
+			<th class="name">公司名稱</th>
+			<th class="sector">行業</th>
+			<th class="firm">劵商</th>
+			<th colspan="2" class="action">評級</th>
+			<th colspan="2" class="targetPrice">目標價</th>
+			<!--<th class="comment">備註</th>-->
+			<th class="summary">報告<br>摘要</th>
+		</tr>
+
+<tr class="sorting"><td  class="code"><span><span><a href="javascript:sortTbl('company_code','ASC','2016-07-06')" class ="btn_sort asce"></a></span><span><a href="javascript:sortTbl('company_code','DESC','2016-07-06')" class ="btn_sort desc"></a></span></span></td><td class="name">&nbsp;</td><td class="sector">&nbsp;</td><td  class="firm"><span><span><a href="javascript:sortTbl('brokerage_name_tc','ASC','2016-07-06')" class ="btn_sort asce"></a></span><span><a href="javascript:sortTbl('brokerage_name_tc','DESC','2016-07-06')" class ="btn_sort desc"></a></span></span></td><td colspan='2' style='text-align:center;' class="action2"><span class="label">目標評級</span><span><span><a href="javascript:sortTbl('rating_to_desc','ASC','2016-07-06')" class ="btn_sort asce"></a></span><span><a href="javascript:sortTbl('rating_to_desc','DESC','2016-07-06')" class ="btn_sort desc"></a></span></span></td><td colspan='2' style='text-align:center;' class="targetPrice2"><span class="label">目標價</span><span><span><a href="javascript:sortTbl('target_price_to','ASC','2016-07-06')" class ="btn_sort asce"></a></span><span><a href="javascript:sortTbl('target_price_to','DESC','2016-07-06')" class ="btn_sort desc"></a></span></span></td><td class="summary">&nbsp;</td>		</tr>
+		
+<tr onmouseover="this.className='table-rollover';" onmouseout="this.className='table-rollout';" class="table-rollout"><td class="code"><a href="/quotePlus/606">00606</a></td><td class="name"><a href="/quotePlus/606">中國糧油控股</a></td><td class="sector">食品/飲料製造</td><td class="firm">大和</td><td class="action1">未評級</td><td class="action2">買入</td><td class="targetPrice1">尚未評級</td><td class="targetPrice2">3.10</td><td class="summary"></td></tr><tr onmouseover="this.className='table-rollover';" onmouseout="this.className='table-rollout alt';" class="table-rollout alt"><td class="code"><a href="/quotePlus/315">00315</a></td><td class="name"><a href="/quotePlus/315">數碼通電訊</a></td><td class="sector">科技</td><td class="firm">美林</td><td class="action1">持有</td><td class="action2">持有</td><td class="targetPrice1">13.40</td><td class="targetPrice2">13.40</td><td class="summary"></td></tr><tr onmouseover="this.className='table-rollover';" onmouseout="this.className='table-rollout';" class="table-rollout"><td class="code"><a href="/quotePlus/6823">06823</a></td><td class="name"><a href="/quotePlus/6823">香港電訊─ S S</a></td><td class="sector">科技</td><td class="firm">美林</td><td class="action1">買入</td><td class="action2">買入</td><td class="targetPrice1">12.30</td><td class="targetPrice2">12.30</td><td class="summary"></td></tr><tr onmouseover="this.className='table-rollover';" onmouseout="this.className='table-rollout alt';" class="table-rollout alt"><td class="code"><a href="/quotePlus/1033">01033</a></td><td class="name"><a href="/quotePlus/1033">中石化油服</a></td><td class="sector">石油化工</td><td class="firm">瑞信</td><td class="action1">賣出</td><td class="action2">賣出</td><td class="targetPrice1">1.50</td><td class="targetPrice2">1.20</td><td class="summary"></td></tr><tr onmouseover="this.className='table-rollover';" onmouseout="this.className='table-rollout';" class="table-rollout"><td class="code"><a href="/quotePlus/386">00386</a></td><td class="name"><a href="/quotePlus/386">中國石油化工股份</a></td><td class="sector">石油化工</td><td class="firm">瑞信</td><td class="action1">持有</td><td class="action2">持有</td><td class="targetPrice1">4.80</td><td class="targetPrice2">5.00</td><td class="summary"></td></tr><tr onmouseover="this.className='table-rollover';" onmouseout="this.className='table-rollout alt';" class="table-rollout alt"><td class="code"><a href="/quotePlus/883">00883</a></td><td class="name"><a href="/quotePlus/883">中國海洋石油</a></td><td class="sector">石油化工</td><td class="firm">瑞信</td><td class="action1">買入</td><td class="action2">買入</td><td class="targetPrice1">11.00</td><td class="targetPrice2">11.20</td><td class="summary"></td></tr>	</tbody>
+</table>
+      <div class="pagingWrap">
+<span>頁數：</span><span class='on'><a href='/marketWatch/Report?d=2016-07-06&p=1'>1</a></span>      </div>
+
+</div> <!-- blkCtnt -->
+		<div id="lastupdate" class="blkFtr">
+			<p>註： </p>
+        <p>買入：代表包括「買入」、「跑贏大市」</p>
+        <p>持有：代表包括「持有」、「中性」</p>
+        <p>賣出：代表包括「賣出」、「跑輸大市」</p>
+        <p>*大和證券評級分5級，為買入、跑贏、持有、跑輸、賣出；里昂證券評級分4級，為買入、跑贏、跑輸、賣出；本網將評級簡化為買入和跑贏簡化為買入、跑輸和賣出簡化為賣出</p>
+</div>
+		<div class="blkLRC"><div></div></div>
+	</div> <!--block -->
+</div>
+<div class="gCol g304">
+	<div class="adSpace">
+		<div class="adSpace ad300">
+			<div id='div-gpt-ad-1385630772174-0'><script type='text/javascript'>googletag.display('div-gpt-ad-1385630772174-0');</script></div>
+		</div>
+		<div class="adSpace ad300">
+			<div id='div-gpt-ad-1385630938573-0'><script type='text/javascript'>googletag.display('div-gpt-ad-1385630938573-0');</script></div>
+		</div>
+	</div>
+</div>
+
+	<div class="gCol g976">
+		<div class="mdB2T"><a href="#top">回上</a></div>
+	</div>
+</div>
+
+<div class="mdFooter">
+	<div class="container">
+		<div class="gCol g976">
+			<p class="mdfLinks"><a href="http://www.hkej.com/template/registration/jsp/aboutus.jsp">信報簡介</a> ｜ <a href="http://www.hkej.com/template/registration/jsp/memberprovision.jsp">服務條款 </a>｜<a href="http://www.hkej.com/template/registration/jsp/privacy.jsp"> 私隱條款 </a>｜<a href="http://www.hkej.com/template/registration/jsp/disclaimer.jsp"> 免責聲明 </a>｜<a href="http://www.hkej.com/ad/html/index.html" target="_blank"> 廣告查詢 </a>｜<a href="http://www.hkej.com/template/confcenter/php/rental_info_detail.php"> 信報會議中心租賃 </a>｜<a href="http://www.hkej.com/template/jobs/jsp/jobs.jsp"> 加入信報 </a>｜<a href="http://www.hkej.com/template/registration/jsp/contactus.jsp"> 聯絡信報</a></p>
+			<p class="mdfDisclaimer">股票及指數資料由財經智珠網有限公司提供。期貨指數資料由天滙財經有限公司提供。外滙及黃金報價由路透社提供。本網站的內容概不構成任何投資意見，本網站內容亦並非就任何個別投資者的特定投資目標、財務狀況及個別需要而編製。投資者不應只按本網站內容進行投資。在作出任何投資決定前，投資者應考慮產品的特點、其本身的投資目標、可承受的風險程度及其他因素，並適當地尋求獨立的財務及專業意見。本網站及其資訊供應商竭力提供準確而可靠的資料，但並不保證資料絕對無誤，資料如有錯漏而令閣下蒙受損失，本公司概不負責。</p>
+			<p class="suggestedBrowsers">建議瀏覽器： Chrome, Firefox, Safari, IE9或以上</p>
+			<p class="mdfCopyrights">信報財經新聞有限公司版權所有，不得轉載。<br />Copyright © 2016 Hong Kong Economic Journal Company Limited. All rights reserved.</p>
+		</div>
+	</div>
+</div>
+<style>
+    #bottomScrollBarButton{
+    position: fixed;
+    bottom:70px;
+    right: 10px;
+    cursor: pointer;
+}
+    </style>
+
+<div id="bottomScrollBarButton"><img src="/images/down_arrow.png" onclick="scrollbarSwitch()"></div>
+<div id="rtWrapper"> <!--Start lower-wrapper -->
+	<div id="runningQuotesBar">
+		<div class="scrollWrapper">
+			<div class="scrollableArea">
+
+<a href="/quotePlus/1" target="_blank"><span>00001</span><span>長江和記實業</span><span>81.900</span><span class="rd">-1.100 (-1.3%)</span></a><a href="/quotePlus/2" target="_blank"><span>00002</span><span>中電控股</span><span>79.450</span><span class="gn">+0.500 (+0.6%)</span></a><a href="/quotePlus/3" target="_blank"><span>00003</span><span>香港中華煤氣</span><span>14.100</span><span class="rd">-0.060 (-0.4%)</span></a><a href="/quotePlus/4" target="_blank"><span>00004</span><span>九龍倉集團</span><span>46.400</span><span class="rd">-0.800 (-1.7%)</span></a><a href="/quotePlus/5" target="_blank"><span>00005</span><span>匯豐控股</span><span>46.750</span><span class="rd">-0.600 (-1.3%)</span></a><a href="/quotePlus/6" target="_blank"><span>00006</span><span>電能實業</span><span>70.350</span><span class="rd">-0.150 (-0.2%)</span></a><a href="/quotePlus/11" target="_blank"><span>00011</span><span>恒生銀行</span><span>131.400</span><span class="rd">-1.500 (-1.1%)</span></a><a href="/quotePlus/12" target="_blank"><span>00012</span><span>恒基地產</span><span>42.950</span><span class="rd">-0.600 (-1.4%)</span></a><a href="/quotePlus/16" target="_blank"><span>00016</span><span>新鴻基地產</span><span>96.400</span><span class="rd">-1.150 (-1.2%)</span></a><a href="/quotePlus/17" target="_blank"><span>00017</span><span>新世界發展</span><span>7.770</span><span class="rd">-0.130 (-1.7%)</span></a><a href="/quotePlus/19" target="_blank"><span>00019</span><span>太古股份公司Ａ</span><span>87.050</span><span class="rd">-1.200 (-1.4%)</span></a><a href="/quotePlus/23" target="_blank"><span>00023</span><span>東亞銀行</span><span>29.350</span><span class="rd">-0.550 (-1.8%)</span></a><a href="/quotePlus/27" target="_blank"><span>00027</span><span>銀河娛樂</span><span>22.250</span><span class="rd">-0.300 (-1.3%)</span></a><a href="/quotePlus/66" target="_blank"><span>00066</span><span>港鐵公司</span><span>39.150</span><span class="rd">-0.350 (-0.9%)</span></a><a href="/quotePlus/83" target="_blank"><span>00083</span><span>信和置業</span><span>12.700</span><span class="rd">-0.160 (-1.2%)</span></a><a href="/quotePlus/101" target="_blank"><span>00101</span><span>恒隆地產</span><span>15.220</span><span class="rd">-0.440 (-2.8%)</span></a><a href="/quotePlus/135" target="_blank"><span>00135</span><span>昆侖能源</span><span>6.250</span><span class="rd">-0.140 (-2.2%)</span></a><a href="/quotePlus/144" target="_blank"><span>00144</span><span>招商局國際</span><span>20.650</span><span class="rd">-0.100 (-0.5%)</span></a><a href="/quotePlus/151" target="_blank"><span>00151</span><span>中國旺旺</span><span>5.130</span><span class="rd">-0.120 (-2.3%)</span></a><a href="/quotePlus/267" target="_blank"><span>00267</span><span>中信股份</span><span>11.060</span><span class="rd">-0.200 (-1.8%)</span></a><a href="/quotePlus/293" target="_blank"><span>00293</span><span>國泰航空</span><span>11.400</span><span class="gn">+0.060 (+0.5%)</span></a><a href="/quotePlus/322" target="_blank"><span>00322</span><span>康師傅控股</span><span>7.010</span><span class="rd">-0.170 (-2.4%)</span></a><a href="/quotePlus/386" target="_blank"><span>00386</span><span>中國石油化工股份</span><span>5.390</span><span class="rd">-0.130 (-2.4%)</span></a><a href="/quotePlus/388" target="_blank"><span>00388</span><span>香港交易所</span><span>182.800</span><span class="rd">-2.100 (-1.1%)</span></a><a href="/quotePlus/494" target="_blank"><span>00494</span><span>利豐</span><span>3.660</span><span class="rd">-0.020 (-0.5%)</span></a><a href="/quotePlus/688" target="_blank"><span>00688</span><span>中國海外發展</span><span>24.900</span><span class="nc">0.000 (0.0%)</span></a><a href="/quotePlus/700" target="_blank"><span>00700</span><span>騰訊控股</span><span>174.800</span><span class="rd">-1.600 (-0.9%)</span></a><a href="/quotePlus/762" target="_blank"><span>00762</span><span>中國聯通</span><span>7.870</span><span class="rd">-0.140 (-1.8%)</span></a><a href="/quotePlus/823" target="_blank"><span>00823</span><span>領展房產基金</span><span>52.450</span><span class="rd">-0.900 (-1.7%)</span></a><a href="/quotePlus/836" target="_blank"><span>00836</span><span>華潤電力</span><span>11.040</span><span class="rd">-0.200 (-1.8%)</span></a><a href="/quotePlus/857" target="_blank"><span>00857</span><span>中國石油股份</span><span>5.150</span><span class="rd">-0.080 (-1.5%)</span></a><a href="/quotePlus/883" target="_blank"><span>00883</span><span>中國海洋石油</span><span>9.450</span><span class="rd">-0.120 (-1.3%)</span></a><a href="/quotePlus/939" target="_blank"><span>00939</span><span>建設銀行</span><span>5.050</span><span class="rd">-0.060 (-1.2%)</span></a><a href="/quotePlus/941" target="_blank"><span>00941</span><span>中國移動</span><span>86.800</span><span class="rd">-1.800 (-2.0%)</span></a><a href="/quotePlus/992" target="_blank"><span>00992</span><span>聯想集團</span><span>4.630</span><span class="rd">-0.030 (-0.6%)</span></a><a href="/quotePlus/1038" target="_blank"><span>01038</span><span>長江基建集團</span><span>64.800</span><span class="rd">-0.350 (-0.5%)</span></a><a href="/quotePlus/1044" target="_blank"><span>01044</span><span>恆安國際</span><span>64.650</span><span class="rd">-1.550 (-2.3%)</span></a><a href="/quotePlus/1088" target="_blank"><span>01088</span><span>中國神華</span><span>13.700</span><span class="rd">-0.360 (-2.6%)</span></a><a href="/quotePlus/1109" target="_blank"><span>01109</span><span>華潤置地</span><span>17.960</span><span class="rd">-0.260 (-1.4%)</span></a><a href="/quotePlus/1113" target="_blank"><span>01113</span><span>長江實業地產</span><span>48.850</span><span class="rd">-0.600 (-1.2%)</span></a><a href="/quotePlus/1299" target="_blank"><span>01299</span><span>友邦保險</span><span>45.450</span><span class="rd">-0.750 (-1.6%)</span></a><a href="/quotePlus/1398" target="_blank"><span>01398</span><span>工商銀行</span><span>4.170</span><span class="rd">-0.030 (-0.7%)</span></a><a href="/quotePlus/1880" target="_blank"><span>01880</span><span>百麗國際</span><span>4.390</span><span class="rd">-0.110 (-2.4%)</span></a><a href="/quotePlus/1928" target="_blank"><span>01928</span><span>金沙中國有限公司</span><span>24.750</span><span class="rd">-0.750 (-2.9%)</span></a><a href="/quotePlus/2318" target="_blank"><span>02318</span><span>中國平安</span><span>33.400</span><span class="rd">-0.550 (-1.6%)</span></a><a href="/quotePlus/2319" target="_blank"><span>02319</span><span>蒙牛乳業</span><span>12.960</span><span class="rd">-0.240 (-1.8%)</span></a><a href="/quotePlus/2388" target="_blank"><span>02388</span><span>中銀香港</span><span>22.900</span><span class="rd">-0.200 (-0.9%)</span></a><a href="/quotePlus/2628" target="_blank"><span>02628</span><span>中國人壽</span><span>16.420</span><span class="rd">-0.240 (-1.4%)</span></a><a href="/quotePlus/3328" target="_blank"><span>03328</span><span>交通銀行</span><span>4.830</span><span class="rd">-0.060 (-1.2%)</span></a><a href="/quotePlus/3988" target="_blank"><span>03988</span><span>中國銀行</span><span>3.040</span><span class="rd">-0.040 (-1.3%)</span></a>			</div>
+		</div>
+	</div>
+
+	<div id="runningNewsBar"> 
+		<div class="scrollWrapper">
+			<div class="scrollableArea">
+<a href='http://www2.hkej.com/instantnews/stock/article/1338642' target='_blank'><span class='timeStamp'>15:30</span>【新股分析】瑞港建設「走出去」初見成果&nbsp;</a><a href='http://www2.hkej.com/instantnews/hongkong/article/1338644' target='_blank'><span class='timeStamp'>15:28</span>本港上半年樓宇買賣合約總值按年跌39%&nbsp;</a><a href='http://www2.hkej.com/instantnews/market/article/1338643' target='_blank'><span class='timeStamp'>15:25</span>【報告速評】恒指14360 大摩bear case會應驗？&nbsp;</a><a href='http://www2.hkej.com/instantnews/international/article/1338622' target='_blank'><span class='timeStamp'>15:11</span>希臘總理冀與阿里合作發展中小企業&nbsp;</a><a href='http://www2.hkej.com/instantnews/china/article/1338620' target='_blank'><span class='timeStamp'>14:57</span>歐洲議會籲歐盟與台談投資協定&nbsp;</a><a href='http://www2.hkej.com/instantnews/international/article/1338611' target='_blank'><span class='timeStamp'>14:52</span>俄鋁在華組電纜合營 拓一帶一路市場&nbsp;</a><a href='http://www2.hkej.com/instantnews/international/article/1338616' target='_blank'><span class='timeStamp'>14:49</span>日股收跌1.85% 創逾一周新低&nbsp;</a><a href='http://www2.hkej.com/instantnews/stock/article/1338614' target='_blank'><span class='timeStamp'>14:44</span>【細股解碼】細股獲利 不能小覻&nbsp;</a><a href='http://www2.hkej.com/instantnews/china/article/1338605' target='_blank'><span class='timeStamp'>14:30</span>台股收報8575點挫1.6% 連跌兩日&nbsp;</a><a href='http://www2.hkej.com/instantnews/international/article/1338607' target='_blank'><span class='timeStamp'>14:29</span>德5月工業訂單按月持平 遜預期&nbsp;</a><a href='http://www2.hkej.com/instantnews/china/article/1338599' target='_blank'><span class='timeStamp'>14:27</span>銀聯夥多家商戶推跨境營銷平台&nbsp;</a><a href='http://www2.hkej.com/instantnews/stock/article/1338600' target='_blank'><span class='timeStamp'>14:07</span>【異動股】新華滙富飆兩成 市前錄高溢價大手成交&nbsp;</a><a href='http://www2.hkej.com/instantnews/china/article/1338594' target='_blank'><span class='timeStamp'>13:45</span>洪為民:蛇口自貿區註冊企業增至逾10萬間&nbsp;</a><a href='http://www2.hkej.com/instantnews/current/article/1338595' target='_blank'><span class='timeStamp'>13:42</span>美4機場擬設自動安檢通道 紓緩人龍&nbsp;</a><a href='http://www2.hkej.com/instantnews/international/article/1338589' target='_blank'><span class='timeStamp'>13:40</span>倫敦金融城促政府快速行動保金融服務地位&nbsp;</a><a href='http://www2.hkej.com/instantnews/stock/article/1338596' target='_blank'><span class='timeStamp'>13:35</span>午後跌幅略收窄 金沙銀娛見四個半月低&nbsp;</a><a href='http://www2.hkej.com/instantnews/china/article/1338592' target='_blank'><span class='timeStamp'>13:22</span>滬指午後止跌回穩 次新股升逾3%&nbsp;</a><a href='http://www2.hkej.com/instantnews/hongkong/article/1338586' target='_blank'><span class='timeStamp'>13:09</span>法興:英國公投脫歐後 投資者窩輪市場部署趨保守&nbsp;</a><a href='http://www2.hkej.com/instantnews/current/article/1338582' target='_blank'><span class='timeStamp'>13:02</span>容克批評英脫歐領導「跳船」非愛國&nbsp;</a><a href='http://www2.hkej.com/instantnews/stock/article/1338583' target='_blank'><span class='timeStamp'>12:58</span>受上市開支影響 亞積邦去年少賺51%&nbsp;</a><a href='http://www2.hkej.com/instantnews/china/article/1338578' target='_blank'><span class='timeStamp'>12:48</span>台鴻海子公司傳赴港上市籌78億&nbsp;</a><a href='http://www2.hkej.com/instantnews/announcement/article/1338573' target='_blank'><span class='timeStamp'>12:46</span>中駿置業6月合同銷售金額飆3.5倍&nbsp;</a><a href='http://www2.hkej.com/instantnews/current/article/1338577' target='_blank'><span class='timeStamp'>12:46</span>高鐵調查報告 斥港鐵須為工程延誤負責&nbsp;</a><a href='http://www2.hkej.com/instantnews/international/article/1338576' target='_blank'><span class='timeStamp'>12:42</span>歐盟倡比特幣和預付卡納入反洗錢規定&nbsp;</a><a href='http://www2.hkej.com/instantnews/china/article/1338566' target='_blank'><span class='timeStamp'>12:35</span>發改委印發民政事業十三五規劃&nbsp;</a>			</div>
+		</div>
+	</div>
+</div> <!--End lower-wrapper -->
+
+<!-- LOAD JAVASCRIPT LATE - JUST BEFORE THE BODY TAG  That way the browser will have loaded the images and will know the width of the images. No need to specify the width in the CSS or inline. -->
+<!-- jQuery library - Please load it from Google API's -->
+<!-- jQuery UI Widget and Effects Core (custom download) You can make your own at: http://jqueryui.com/download -->
+<!--<script src="/plug-in/runningtext/js/jquery-ui-1.js" type="text/javascript"></script>-->
+	
+<!-- Latest version of jQuery Mouse Wheel by Brandon Aaron
+ You will find it here: http://brandonaaron.net/code/mousewheel/demos -->
+<script src="/plugin/runningText/js/jquery_003.js?2014011701" type="text/javascript"></script>
+<!-- jQuery Kinetic - for touch -->
+<script src="/plugin/runningText/js/jquery_002.js?2014011701" type="text/javascript"></script>	
+<!-- Smooth Div Scroll 1.3 minified-->
+<script src="/plugin/runningText/js/jquery_004.js?2014011701" type="text/javascript"></script>
+<script src="/js/js.cookie.js?2014011701" type="text/javascript"></script>
+<script src="/js/hkej.bottomScrollBar.js?2014011701" type="text/javascript"></script>
+
+<!-- If you want to look at the uncompressed version you find it at js/jquery.smoothDivScroll-1.3.js -->
+<!-- Plugin initialization -->
+<script type="text/javascript">
+	$(document).ready(function () {
+		$("#runningQuotesBar").smoothDivScroll({
+			autoScrollingMode: "always",
+			autoScrollingDirection: "endlessLoopRight",
+			autoScrollingStep: 1,
+			autoScrollingInterval: 18,
+			easingAfterHotSpotScrolling: false,
+      mousewheelScrolling: "allDirections",
+      manualContinuousScrolling: true,
+			/* getContentOnLoad: { method: "getAjaxContent",
+													content: "ajaxContent.html",
+													manipulationMethod: "replace"} */ });
+		$("#runningNewsBar").smoothDivScroll({
+			autoScrollingMode: "onStart",
+			autoScrollingDirection: "endlessLoopRight",
+			autoScrollingStep: 2,
+			autoScrollingInterval: 45,
+			easingAfterHotSpotScrolling: false,
+			mousewheelScrolling: "allDirections",
+			manualContinuousScrolling: true,
+			/* getContentOnLoad: { method: "getAjaxContent",
+													content: "/marketdata/getLatestNews",
+													manipulationMethod: "replace"} */ });
+		
+		$("#runningQuotesBar").bind("mouseover", function () { $(this).smoothDivScroll("stopAutoScrolling"); }).bind("mouseout", function () { $(this).smoothDivScroll("startAutoScrolling"); });
+
+		$("#runningNewsBar").bind("mouseover", function () { $(this).smoothDivScroll("stopAutoScrolling"); }).bind("mouseout", function () { $(this).smoothDivScroll("startAutoScrolling"); });
+                                            checkScrollBarCookie();
+	});
+</script>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4710049-1");
+pageTracker._initData();
+pageTracker._setDomainName("hkej.com");
+pageTracker._addIgnoredRef("hkej.com");
+pageTracker._trackPageview();
+</script>
+<!-- Begin comScore Tag -->
+<script>
+    document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
+</script>
+<script>
+  COMSCORE.beacon({
+    c1:2,
+    c2:7634239,
+    c3:"",
+    c4:"",
+    c5:"",
+    c6:"",
+    c15:""
+  });
+</script>
+<noscript>
+  <img src="http://b.scorecardresearch.com/p?c1=2&c2=7634239&c3=&c4=&c5=&c6=&c15=&cj=1" />
+</noscript>
+<!-- End comScore Tag -->
+
+<!-- Start Alexa Certify Javascript -->
+<script type="text/javascript">
+_atrk_opts = { atrk_acct:"U5n4j1a8Dy000Z", domain:"hkej.com",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=U5n4j1a8Dy000Z" style="display:none" height="1" width="1" alt="" /></noscript>
+<!-- End Alexa Certify Javascript -->
+<!-- Google Code for Remarketing Tag -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 947948851;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/947948851/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<!-- End Google Code for Remarketing Tag -->
+
+<!-- Facebook Custom Audience Pixel -->
+<script>(function() {
+var _fbq = window._fbq || (window._fbq = []);
+if (!_fbq.loaded) {
+var fbds = document.createElement('script');
+fbds.async = true;
+fbds.src = '//connect.facebook.net/en_US/fbds.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(fbds, s);
+_fbq.loaded = true;
+}
+_fbq.push(['addPixelId', '630331880400637']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=630331880400637&amp;ev=PixelInitialized" /></noscript>
+<!--End Facebook Custom Audience Pixel -->
+
+</body>
+</html>
+
